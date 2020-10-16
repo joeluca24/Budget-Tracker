@@ -6,7 +6,7 @@ let dburl = "mongodb://localhost/budget";
 if(typeof process.env.MONGODB_URI !== 'undefined'){
   dburl = process.env.MONGODB_URI
 }
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
